@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oltsu-code | Sudoku Generator</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <h1>Sudoku Generator</h1>
+    </header>
+
+    <section id="difficulty-selection">
+        <h2>Select Difficulty:</h2>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </section>
+
+        <div id="sudoku-grid">
+            <!-- sudoku grid (NOT A DUMMY DIV) -->
+        </div>
+        
+
+    <button id="generate-button">Generate!</button>
+
+    <button id="download-button">Download as PDF</button>
+    
+    <script src="pdf-lib.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

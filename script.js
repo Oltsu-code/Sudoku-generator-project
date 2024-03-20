@@ -141,11 +141,18 @@ async function downloadPDF(grid, difficulty) {
     const gridX = centerX - gridWidth / 2;
     const gridY = centerY - gridHeight / 2;
 
-    grid.forEach((row, rowIndex) => {
+    const flippedGrid = []; // has to be flipped cus im dumb
+    for (let colIndex = 0; colIndex < 9; colIndex++) {
+        flippedGrid.push([]);
+        for (let rowIndex = 0; rowIndex < 9; rowIndex++) {
+            flippedGrid[colIndex][rowIndex] = grid[rowIndex][colIndex];
+        }
+    }
+
+    flippedGrid.forEach((row, rowIndex) => {
         row.forEach((cellValue, colIndex) => {
             const x = gridX + colIndex * cellSize;
-            const y = gridY + (8 - rowIndex) * cellSize;
-
+            const y = gridY + (8 - rowIndex) * cellSize; // yeah ik crazy
             page.drawRectangle({
                 x,
                 y,
@@ -190,6 +197,6 @@ document.getElementById('generate-button').addEventListener('click', function() 
 
 document.getElementById('download-button').addEventListener('click', function() {
     const difficulty = document.getElementById('difficulty').value;
-    //const grid = latestGrid;
-    //downloadPDF(grid, difficulty);
+    const grid = latestGrid;
+    downloadPDF(grid, difficulty);
 });

@@ -1,3 +1,6 @@
+// yo pls dont read this, ik my code is trash and i should touch grass, get a life, learn js and get a cs degree, but... im tooo lazy
+// so pls stop reading :)
+
 let latestGrid = [];
 
 function generatePartialGrid(difficulty) {
@@ -70,7 +73,8 @@ function removeCells(grid, difficulty) {
     const difficultyLevels = {
         easy: { cellsToRemove: 40 },
         medium: { cellsToRemove: 50 },
-        hard: { cellsToRemove: 60 }
+        hard: { cellsToRemove: 60 },
+        debug: { cellsToRemove: 0 } // for debugging purposes
     };
 
     const { cellsToRemove } = difficultyLevels[difficulty];
@@ -184,7 +188,7 @@ async function downloadPDF(grid, difficulty) {
     link.href = window.URL.createObjectURL(blob);
     link.download = `${difficulty}_sudoku.pdf`;
     link.click();
-    //alert('Download started!');
+    //alert('Download started!'); // i had this but its annoying AF
     
     console.log(`Latest grid: ${grid}`);
 }

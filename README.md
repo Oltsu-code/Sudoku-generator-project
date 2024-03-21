@@ -10,6 +10,7 @@ This is a simple Sudoku puzzle generator built using JavaScript.
 
 ## Credits
 PDFLib: https://pdf-lib.js.org/
+
 Sudoku puzzle logic adapted from https://en.wikipedia.org/wiki/Sudoku_solving_algorithms
 
 ## License

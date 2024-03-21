@@ -2,9 +2,11 @@
 This is a simple Sudoku puzzle generator built using JavaScript.
 
 ## Usage (if u rly want to)
-Clone the repo
-Open the index.html
-Do your thing
+1. Clone the repo 
+
+2. Open the index.html
+
+3. Do your thing
 
 ## Credits
 PDFLib: https://pdf-lib.js.org/
